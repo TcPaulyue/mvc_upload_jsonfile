@@ -2,13 +2,15 @@ package com.cvicse.uploadmvc;
 
 import com.alibaba.fastjson.JSONObject;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+//import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.stereotype.Component;
+import org.springframework.data.elasticsearch.annotations.Document;
 
 import javax.validation.constraints.NotNull;
 
 @Component
-@Document(collection = "ExpresswayInfo")
+//@Document(collection = "ExpresswayInfo")
+@Document(indexName = "test")
 public class ExpresswayInfo {
     @Id
     private String id;
